@@ -461,171 +461,19 @@
     "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
   },
   {
-    "id": "cmp-024",
-    "title": "Сумочка «Нежность» — мини-композиция (№24)",
+    "id": "cmp-026",
+    "title": "Сумочка «Озотамнус» — воздушная композиция (№26)",
     "category": "baskets",
     "categoryLabel": "Корзинки",
-    "price": 1630,
-    "description": "Композиция в сумочке с оазисом: долго сохраняет свежесть и выглядит очень мило. Отлично как подарок-'сюрприз' и для фото.",
+    "price": 1430,
+    "description": "Композиция в сумочке с оазисом: хризантема, альстромерия и озотамнус. Лёгкий, нежный вариант с хорошей стойкостью.",
     "items": [
-      "Роза Кустовая",
       "Хризантема Алтай",
       "Альстромерия",
-      "Самшит"
+      "Озотамнус"
     ],
     "images": [
-      "images/baskets/cmp-024.jpg",
-      "images/baskets/cmp-024_1.jpg",
-      "images/baskets/cmp-024_2.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-025",
-    "title": "Сумочка «Алтай» — нежный минимализм (№25)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 1500,
-    "description": "Лёгкая композиция в сумочке: хризантема «Алтай» и лимониум. Очень стойкий и милый вариант на каждый день.",
-    "items": [
-      "Хризантема Алтай",
-      "Лимониум"
-    ],
-    "images": [
-      "images/baskets/cmp-025.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-027",
-    "title": "Сумочка «Роза & лимониум» — милый сюрприз (№27)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 1530,
-    "description": "Композиция в сумочке с оазисом: роза, хризантема, альстромерия и лимониум. Нежный и очень 'подарочный' формат.",
-    "items": [
-      "Роза Кустовая",
-      "Хризантема Алтай",
-      "Альстромерия",
-      "Лимониум"
-    ],
-    "images": [
-      "images/baskets/cmp-027.jpg",
-      "images/baskets/cmp-027_1.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-028",
-    "title": "Коробка «Амарант» — фактура и стиль (№28)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 2280,
-    "description": "Композиция в коробке с оазисом: кустовые розы, гвоздики, амарант и лагурус. Формат 'поставил и любуешься' — очень удобно.",
-    "items": [
-      "Роза Кустовая",
-      "Гвоздика",
-      "Амарант",
-      "Лагурус"
-    ],
-    "images": [
-      "images/baskets/cmp-028.jpg",
-      "images/baskets/cmp-028_1.jpg",
-      "images/baskets/cmp-028_1.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-029",
-    "title": "Коробка «Нутан» — утончённая композиция (№29)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 2705,
-    "description": "Композиция в коробке: кустовые розы, нутан, сантини и альстромерия с сухоцветами. Стильно, необычно и очень 'авторски'.",
-    "items": [
-      "Роза Кустовая",
-      "Хризантема Сантини",
-      "Альстромерия",
-      "Нутан",
-      "Лагурус",
-      "Дуб крашенный"
-    ],
-    "images": [
-      "images/baskets/cmp-029.jpg",
-      "images/baskets/cmp-029_1.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-030",
-    "title": "Коробка «Премиум микс» — много фактур (№30)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 3815,
-    "description": "Большая коробка с оазисом: розы нескольких сортов, леукадендрон, гвоздики и сухоцветы. Пышно, фактурно и очень празднично.",
-    "items": [
-      "Роза Пинк Мондиал",
-      "Роза Explorer",
-      "Роза Кустовая Премиум",
-      "Леукадендрон",
-      "Гвоздика Белая",
-      "Гвоздика Нежно розовая",
-      "Лагурус",
-      "Амарант",
-      "Гортензия сухоцвет"
-    ],
-    "images": [
-      "images/baskets/cmp-030.jpg",
-      "images/baskets/cmp-030_1.jpg",
-      "images/baskets/cmp-030_2.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-031",
-    "title": "Корзинка «Кения» — нежно и стойко (№31)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 2620,
-    "description": "Корзинка с оазисом: кустовые розы, хризантема «Алтай» и роза Кения. Очень стойкий формат — удобно дарить и сразу поставить.",
-    "items": [
-      "Роза Кустовая",
-      "Хризантема Алтай",
-      "Роза Кения"
-    ],
-    "images": [
-      "images/baskets/cmp-031.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-032",
-    "title": "Сумочка «Сантини» — компактная композиция (№32)",
-    "category": "baskets",
-    "categoryLabel": "Корзинки",
-    "price": 1560,
-    "description": "Композиция в сумочке с оазисом: кустовая роза, сантини и гвоздика. Очень милый формат — идеально как небольшой подарок.",
-    "items": [
-      "Роза Кустовая",
-      "Хризантема Сантини",
-      "Гвоздика кустовая"
-    ],
-    "images": [
-      "images/baskets/cmp-032.jpg"
+      "images/baskets/cmp-026.jpg"
     ],
     "phone": "+79274719121",
     "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
