@@ -812,5 +812,24 @@
     "phone": "+79274719121",
     "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
     "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
+      },
+  {
+    "id": "cmp-1",
+    "title": "Нефть и пламя (№1)",
+    "category": "bouquets",
+    "categoryLabel": "Букеты",
+    "price": 2500,
+    "description": "Букет оформлен на аквабоксе — это удобная одноразовая ваза с водой, которая сохраняет свежесть цветов. Для комфортной транспортировки букет размещён в специальной коробке-переноске. Каждый букет собирается индивидуально после оформления заказа.",
+    "items": [
+      "Лагурус",
+      "Гвоздика",
+      "Хризантема кустовая"
+    ],
+    "images": [
+      "images/bouquets/букет 17.jpg"
+    ],
+    "phone": "+79274719121",
+    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
+    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
   }
 ]
