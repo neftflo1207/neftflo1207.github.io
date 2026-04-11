@@ -631,30 +631,6 @@
     "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
   },
   {
-    "id": "cmp-041",
-    "title": "Кустовая роза & Эустома — изысканный комплимент (№41)",
-    "category": "bouquets",
-    "categoryLabel": "Букеты",
-    "price": 3700,
-    "description": "Утонченный букет с кустовыми розами и нежной эустомой, дополненный гвоздикой и воздушным лагурусом. Элегантная композиция для особых поздравлений.",
-    "items": [
-      "Роза Кустовая Импорт",
-      "Гвоздика",
-      "Роза Кэндилайт",
-      "Хризантема Балтик",
-      "Эустома",
-      "Лагурус"
-    ],
-    "images": [
-      "images/bouquets/cmp-041.jpg",
-      "images/bouquets/cmp-041_1.jpg",
-      "images/bouquets/cmp-041_2.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
     "id": "cmp-082",
     "title": "Розы Кэндилайт — монобукет (№82)",
     "category": "mono",
@@ -832,28 +808,6 @@
     ],
     "images": [
       "images/postcards/cmp-105.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-150",
-    "title": "Нежная романтика — весенний букет",
-    "category": "bouquets",
-    "categoryLabel": "Букеты",
-    "price": 3070,
-    "description": "Изящный букет в нежных розовых тонах с кустовыми розами и альстромериями, дополненный гвоздиками и декоративной зеленью. Создает атмосферу нежности и весеннего настроения.",
-    "items": [
-      "Роза Пинк Мондиал",
-      "Роза кустовая",
-      "Гвоздика",
-      "Альстромерия",
-      "Амарант",
-      "Самшит"
-    ],
-    "images": [
-      "images/bouquets/cmp-150.jpg"
     ],
     "phone": "+79274719121",
     "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
