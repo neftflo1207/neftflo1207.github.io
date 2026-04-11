@@ -655,26 +655,6 @@
     "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
   },
   {
-    "id": "cmp-042",
-    "title": "Тюльпан & Хамелациум — весенний комплимент (№42)",
-    "category": "bouquets",
-    "categoryLabel": "Букеты",
-    "price": 2090,
-    "description": "Нежный весенний букет с тюльпанами и ароматным хамелациумом. Свежая и элегантная композиция, передающая чувства нежности и тепла.",
-    "items": [
-      "Тюльпан",
-      "Хамелациум"
-    ],
-    "images": [
-      "images/bouquets/cmp-042.jpg",
-      "images/bouquets/cmp-042_1.jpg",
-      "images/bouquets/cmp-042_2.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
     "id": "cmp-082",
     "title": "Розы Кэндилайт — монобукет (№82)",
     "category": "mono",
@@ -874,28 +854,6 @@
     ],
     "images": [
       "images/bouquets/cmp-150.jpg"
-    ],
-    "phone": "+79274719121",
-    "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-    "whatsApp": "https://wa.me/message/QA4UW2CU7JN7O1"
-  },
-  {
-    "id": "cmp-151",
-    "title": "Солнечное сияние — яркий букет",
-    "category": "bouquets",
-    "categoryLabel": "Букеты",
-    "price": 1895,
-    "description": "Яркий и солнечный букет с розами Кэндилайт, дополненный хризантемой Балтика, кустовой розой и декоративным лагурусом. Создаёт атмосферу тепла, радости и позитивного настроения.",
-    "items": [
-      "Роза Кэндилайт",
-      "Хризантема Балтика",
-      "Роза кустовая",
-      "Лагурус"
-    ],
-    "images": [
-      "images/bouquets/cmp-151.jpg",
-      "images/bouquets/cmp-151_1.jpg",
-      "images/bouquets/cmp-151_2.jpg"
     ],
     "phone": "+79274719121",
     "instagram": "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
