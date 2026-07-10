@@ -14,7 +14,7 @@
       <a class="brand" href="#/">
         <span class="brand__dot"></span>
         <img class="brand__logo" src="./images/logo svg.svg" alt="НЕФТЪ 12.07" />
-        <span class="brand__text">НЕФТЪ 12.07 - Каталог</span>
+        <span class="brand__text">НЕФТЪ 15.07 - Каталог</span>
       </a>
 
       <nav class="nav">
@@ -122,7 +122,7 @@
 
       <!-- left paty -->
       <div class="footer__block">
-        <div class="muted">© НЕФТЪ 12.07 — Каталог</div>
+        <div class="muted">© НЕФТЪ 15.07 — Каталог</div>
         <div class="muted" id="actualTime">Актуально на сегодня</div>
       </div>
 
@@ -130,8 +130,8 @@
       <div class="footer__block">
         <div class="footer__title">Контакты</div>
 
-        <a class="footer__link" href="tel:+79274719121">
-          📞 +7 927 471-91-21
+        <a class="footer__link" href="tel:+79950070261">
+          📞 +7 995 007-02-61
         </a>
 
         <a class="footer__link" href="https://t.me/mam_insad_me" target="_blank">
@@ -152,13 +152,13 @@
         </a>
 
         <div class="muted footer__address">
-          📍 Казань, Сибирский тракт 11/1
+          📍 Казань, Генерала Махмута Гареева 9а
         </div>
       </div>
 
       <!-- ya mapsa -->
       <div class="footer__block footer__map">
-        <a href="https://yandex.ru/maps/?pt=49.182644,55.806980&z=16&l=map" target="_blank" class="footer__map-link"
+        <a href="https://yandex.ru/maps/43/kazan/house/ulitsa_generala_makhmuta_gareyeva_9a/YEEYfwdmTEQFQFtvfXR0eXViZw==/?ll=48.905964%2C55.858592&z=16.71" target="_blank" class="footer__map-link"
           title="Открыть в Яндекс Картах">
 
           <iframe src="https://yandex.ru/map-widget/v1/?ll=49.183023%2C55.806942&z=16&pt=49.182644,55.806980,pm2rdm"
@@ -240,6 +240,42 @@
       font-size: 13px;
     }
   }
+  /* 1. Добавляем узор на шапку сайта */
+.header {
+    background-image: url('bg-pattern.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 2. Делаем фон самого сайта белым */
+body {
+    background-color: #ffffff !important;
+}
+
+/* 3. Красим карточки в серый цвет */
+.card {
+    background-color: #f0f0f0 !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+/* 4. Выравниваем внутреннюю часть карточки */
+.card__body {
+    background-color: #f0f0f0 !important; 
+    padding: 15px 20px 20px 20px !important;
+}
+
+/* 5. Делаем текст названия и цены отчётливым */
+.card__title {
+    color: #111111 !important;
+    margin-bottom: 8px !important;
+}
+
+.card__price {
+    color: #555555 !important;
+    font-weight: bold !important;
+}
 </style>
 
 </body>
