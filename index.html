@@ -255,27 +255,40 @@ body {
 }
 
 /* 3. Красим карточки в серый цвет */
+/* 3. Облегчаем карточки (делаем их без серого фона) */
 .card {
-    background-color: #f0f0f0 !important;
-    border-radius: 20px !important;
+    background-color: transparent !important;
+    border-radius: 16px !important;
     overflow: hidden;
+    box-shadow: none !important; /* Убираем тени, если они были */
+    transition: transform 0.3s ease !important;
 }
 
-/* 4. Выравниваем внутреннюю часть карточки */
+/* Эффект при наведении на карточку (как на дорогих сайтах) */
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* 4. Внутренние отступы для текста под фото */
 .card__body {
-    background-color: #f0f0f0 !important; 
-    padding: 15px 20px 20px 20px !important;
+    background-color: transparent !important; 
+    padding: 12px 4px 16px 4px !important; /* Уменьшаем отступы по бокам, чтобы текст был вровень с фото */
 }
 
-/* 5. Делаем текст названия и цены отчётливым */
+/* 5. Делаем подписи тонкими и аккуратными */
 .card__title {
+    font-weight: 400 !important;
+    font-size: 15px !important;
     color: #111111 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 4px !important;
+    line-height: 1.3 !important;
 }
 
 .card__price {
-    color: #555555 !important;
-    font-weight: bold !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: #777777 !important; /* Чуть приглушаем цену, чтобы она не кричала */
+
 }
 /* Изменяем шрифт для всего сайта на стильный Inter */
 body, button, input, select, textarea {
