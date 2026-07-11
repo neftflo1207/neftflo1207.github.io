@@ -954,29 +954,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Открытие/закрытие меню по клику на бургер
         burgerBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            burgerBtn.classList.toggle('is-active'); // На случай анимации крестика
+            burgerBtn.classList.toggle('is-active');
             navMenu.classList.toggle('active');
         });
 
-        // Плавный скролл при клике на категории
+        // Плавный скролл и фильтрация при клике на категории
         const navLinks = navMenu.querySelectorAll('.nav__link');
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Если это ссылка на гугл-форму (опрос/подписка), не ломаем её
+                // Если это внешняя ссылка (например, опрос), не трогаем её
                 if (this.getAttribute('href').startsWith('http')) {
                     return; 
                 }
 
-                e.preventDefault(); // Отменяем резкий прыжок
-
-                // Ищем начало каталога
+                // Ищем начало каталога, чтобы плавно прокрутить
                 const targetSection = document.querySelector('.layout') || document.getElementById('grid');
                 
                 if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    // Даем микрозадержку в 50 миллисекунд, чтобы старый скрипт успел переключить категорию
+                    setTimeout(() => {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 50);
                 }
 
                 // Закрываем меню после клика
