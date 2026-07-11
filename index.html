@@ -125,61 +125,35 @@
       </div>
     </dialog>
   </main>
-
-  <footer class="footer">
-    <div class="wrap footer__inner footer__grid">
-
-      <!-- left paty -->
-      <div class="footer__block">
-        <div class="muted">© НЕФТЪ 15.07 — Каталог</div>
-        <div class="muted" id="actualTime">Актуально на сегодня</div>
-      </div>
-
-      <!-- contcact -->
-      <div class="footer__block">
-        <div class="footer__title">Контакты</div>
-
-        <a class="footer__link" href="tel:+79950070261">
-          📞 +7 995 007-02-61
-        </a>
-
-        <a class="footer__link" href="https://t.me/mam_insad_me" target="_blank">
-          💬 Telegram
-        </a>
-
-        <a class="footer__link" href="https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr"
-          target="_blank">
-          📷 Instagram
-        </a>
-
-        <a class="footer__link" href="https://wa.me/message/QA4UW2CU7JN7O1" target="_blank">
-          💚 WhatsApp
-        </a>
-
-        <a class="footer__link" href="https://max.ru/id163604335366_biz" target="_blank">
-          🇷🇺 MaxMessanger
-        </a>
-
-        <div class="muted footer__address">
-          📍 Казань, Генерала Махмута Гареева 9а
+<!-- Минималистичный футер в стиле Sobran v Sadu -->
+<footer class="main-footer">
+    <div class="footer__inner">
+        <div class="footer__brand">нефтъ 12.07</div>
+        
+        <div class="footer__info">
+            <div class="footer__item">
+                <span>адрес студии</span>
+                <p>Казань, Генерала Махмута Гареева 9а</p>
+                <p style="margin-top: 8px !important; font-size: 12px !important; color: #999999 !important;">ежедневно 09:00 — 21:00</p>
+            </div>
+            
+            <div class="footer__item">
+                <span>связь</span>
+                <p><a href="tel:+79950070261">+7 995 007-02-61</a></p>
+                <p style="margin-top: 6px !important;">
+                    <a href="https://t.me/mam_insad_me" target="_blank">telegram</a> / 
+                    <a href="https://wa.me/message/QA4UW2CU7JN701" target="_blank">whatsapp</a> / 
+                    <a href="https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr" target="_blank">instagram</a>
+                </p>
+            </div>
         </div>
-      </div>
-
-      <!-- ya mapsa -->
-      <div class="footer__block footer__map">
-        <a href="https://yandex.ru/maps/43/kazan/house/ulitsa_generala_makhmuta_gareyeva_9a/YEEYfwdmTEQFQFtvfXR0eXViZw==/?ll=48.905964%2C55.858592&z=16.71" target="_blank" class="footer__map-link"
-          title="Открыть в Яндекс Картах">
-
-          <iframe src="https://yandex.ru/map-widget/v1/?ll=49.183023%2C55.806942&z=16&pt=49.182644,55.806980,pm2rdm"
-            width="100%" height="180" frameborder="0" loading="lazy">
-          </iframe>
-
-        </a>
-
-      </div>
-
     </div>
-  </footer>
+    
+    <!-- Интегрированная аккуратная карта чуть ниже -->
+    <div style="max-width: 800px; margin: 40px auto 0 auto; filter: grayscale(1); opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=49.183023%2C55.806942&z=16&pt=49.182644,55.806942,pm2rdm" width="100%" height="150" frameborder="0" loading="lazy" style="border: none; border-radius: 12px;"></iframe>
+    </div>
+</footer>
 
 
   <script src="./js/app.js"></script>
