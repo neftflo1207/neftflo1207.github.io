@@ -60,7 +60,7 @@
         <div class="hero-cover__text">
             <h2>Цветочная подписка</h2>
             <p>Регулярная доставка свежих концептуальных букетов в ваш дом или офис. Заполните анкету, чтобы мы подобрали идеальный формат и график под вашу атмосферу.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScK8FtkK9Z-WBa8OQw9ybTT2tGCF37g75uZXueBhKJaJhazUw/viewform" target="_blank" class="btn-subscription">Оформить подписку</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScK8FtkK9Z-WBa8OQw9ybTT2tGCF37g75uZXueBhKJaJhazUw/viewform" target="_blank" class="btn-try-subscription">Попробовать</a>
         </div>
     </section>
   <main class="wrap main">
@@ -962,7 +962,6 @@ a[href*="docs.google.com/forms"] {
 @media screen and (max-width: 768px) {
     .subscription-cover {
         min-height: 60vh !important;
-        /* Отключаем fixed, который ломает Safari на смартфонах */
         background-attachment: scroll !important; 
         background-position: center center !important;
     }
@@ -973,11 +972,35 @@ a[href*="docs.google.com/forms"] {
         font-size: 14px !important;
         padding: 0 10px !important;
     }
-    .btn-subscription {
+    .btn-try-subscription {
         padding: 14px 30px !important;
-        width: 100%;
-        box-sizing: border-box;
+        width: 85% !important;
+        box-sizing: border-box !important;
     }
+}
+
+/* Стильная журнальная кнопка «Попробовать» с тонкой рамкой */
+.btn-try-subscription {
+    display: inline-block !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    color: #ffffff !important;
+    background-color: transparent !important;
+    padding: 16px 45px !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+    margin-top: 20px !important;
+}
+
+.btn-try-subscription:hover {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    border-color: #ffffff !important;
 }
 </style>
 <script>
