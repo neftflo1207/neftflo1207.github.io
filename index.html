@@ -1072,6 +1072,12 @@ a[href*="docs.google.com/forms"] {
         line-height: 1.3 !important;
     }
 }
+/* Полностью удаляем кнопку WhatsApp из карточек товаров */
+a[href*="wa.me"], 
+a[href*="whatsapp.com"],
+[class*="whatsapp"] {
+    display: none !important;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
