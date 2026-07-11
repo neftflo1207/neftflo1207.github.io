@@ -853,6 +853,14 @@ aside.sidebar, .sidebar {
         height: 200px !important; /* Аккуратный размер для смартфона */
     }
 }
+/* Полностью скрываем старую плашку заголовка с опечаткой */
+.main-header, 
+.page-title, 
+.catalog__title, 
+main > h1, 
+div[class*="header"] > h1 {
+    display: none !important;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
