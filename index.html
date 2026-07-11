@@ -958,74 +958,20 @@ nav.nav .nav__link:hover {
 a[href*="docs.google.com/forms"] {
     display: none !important;
 }
-/* ==========================================================================
-   СЕКЦИЯ ПОДПИСКИ НА ЦВЕТЫ (ВТОРОЙ БОЛЬШОЙ ФОН)
-   ========================================================================== */
-
-.subscription-cover {
-    position: relative !important;
-    min-height: 80vh !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
-                      url('./images/subscription-bg.jpg') !important; /* Сюда закинь фоновую картинку */
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 60px 20px !important;
-}
-
-.subscription-cover h2 {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 42px !important;
-    font-weight: 300 !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: #ffffff !important;
-    margin-bottom: 20px !important;
-}
-
-.subscription-cover p {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 300 !important;
-    line-height: 1.6 !important;
-    color: rgba(255, 255, 255, 0.85) !important;
-    max-width: 600px !important;
-    margin: 0 auto 35px auto !important;
-}
-
-.btn-subscription {
-    display: inline-block !important;
-    font-family: 'Inter', sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.1em !important;
-    color: #111111 !important;
-    background-color: #ffffff !important;
-    padding: 16px 40px !important;
-    text-decoration: none !important;
-    border: 1px solid #ffffff !important;
-    transition: all 0.3s ease !important;
-}
-
-.btn-subscription:hover {
-    background-color: transparent !important;
-    color: #ffffff !important;
-}
-
+/* Адаптив под мобильные телефоны с исправлением картинки */
 @media screen and (max-width: 768px) {
     .subscription-cover {
         min-height: 60vh !important;
+        /* Отключаем fixed, который ломает Safari на смартфонах */
+        background-attachment: scroll !important; 
+        background-position: center center !important;
     }
     .subscription-cover h2 {
         font-size: 28px !important;
     }
     .subscription-cover p {
         font-size: 14px !important;
+        padding: 0 10px !important;
     }
     .btn-subscription {
         padding: 14px 30px !important;
