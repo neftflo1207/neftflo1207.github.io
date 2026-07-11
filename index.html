@@ -797,6 +797,47 @@ aside.sidebar, .sidebar {
     margin-top: 25px !important;
     background: transparent !important;
 }
+/* ==========================================================================
+   ЖЕСТКОЕ ВЫРАВНИВАНИЕ И КОМПАКТНОСТЬ КАТАЛОГА (ФИНАЛ)
+   ========================================================================== */
+
+/* Принудительно перестраиваем сетку: карточки БУДУТ по 3-4 в ряд на ПК */
+#grid.grid, .grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+    gap: 30px 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Сбрасываем старую жесткую ширину с самих карточек, если она была задана */
+.grid > div, .product-card, [class*="card"] {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important; /* Отключаем флекс-растяжение старого шаблона */
+}
+
+/* Делаем картинки товаров аккуратными и компактными */
+.grid > div img, .product-card img, [class*="card"] img {
+    width: 100% !important;
+    height: 320px !important; /* Уменьшили высоту, чтобы карточки не были огромными */
+    max-height: 320px !important;
+    object-fit: cover !important;
+}
+
+/* --- МОБИЛЬНАЯ ВЕРСИЯ (СТРОГО ПО 2 В РЯД) --- */
+@media screen and (max-width: 768px) {
+    #grid.grid, .grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Ровно 2 колонки на телефонах */
+        gap: 20px 12px !important;
+    }
+
+    .grid > div img, .product-card img, [class*="card"] img {
+        height: 220px !important; /* Компактная высота для экранов мобильных */
+        max-height: 220px !important;
+    }
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
