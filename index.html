@@ -712,34 +712,50 @@ aside.sidebar, .sidebar {
     margin: 0 !important;
 }
 
-/* Очищаем контейнер кнопок и заставляем их встать ровно в столбик без обрезания */
+/* Центрируем контейнер с кнопками цен */
 .panel__row--stack, [class*="chipset"], .panel__row {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 14px !important;
+    align-items: center !important; /* Выравниваем всё строго по центру */
+    gap: 10px !important;
     padding: 0 !important;
-    margin: 0 0 35px 0 !important;
+    margin: 10px 0 30px 0 !important;
     background: transparent !important;
+    width: 100% !important;
 }
 
-/* Пересобираем сами кнопки цен: убираем старые левые паддинги, которые сдвигали текст */
+/* Делаем цифры цен крупнее, жирнее и красивее */
 .sidebar .chip, .sidebar button[data-price], .panel__row .chip {
     background: transparent !important;
     border: none !important;
-    border-bottom: 1px solid transparent !important;
-    color: #555555 !important;
+    color: #222222 !important;
     border-radius: 0 !important;
-    padding: 4px 0 !important;
+    padding: 8px 16px !important; /* Добавляем отступы вокруг цифр */
     margin: 0 !important;
     font-family: 'Inter', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 300 !important;
-    text-align: left !important;
+    font-size: 16px !important; /* Сделали крупнее */
+    font-weight: 600 !important; /* Сделали жирнее (полужирный) */
+    letter-spacing: 0.03em !important;
+    text-align: center !important;
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    width: fit-content !important; /* Чтобы линия подчеркивания была строго по длине текста */
-    display: block !important;
+    transition: all 0.2s ease-in-out !important;
+    width: 100% !important; /* Чтобы кнопка занимала всю ширину */
+    max-width: 220px !important;
+}
+
+/* Эффект при наведении и для АКТИВНОЙ выбранной цены */
+.sidebar button.chip--active, 
+.sidebar button[class*="active"], 
+.sidebar button.chip:hover,
+.sidebar button[data-price]:hover {
+    color: #ffffff !important; /* Белый текст */
+    background: #111111 !important; /* Наглухо черный строгий фон */
+    border-bottom: none !important; /* Убираем нижнюю полосу, теперь работает заливка */
+}
+
+/* Центрируем инпут поиска для гармонии */
+.sidebar input[type="text"], .sidebar .search-input, input[id*="search"] {
+    text-align: center !important; /* Текст поиска тоже по центру */
 }
 
 /* Активное состояние кнопки (выбранная цена) и ховер */
