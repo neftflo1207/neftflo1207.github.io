@@ -55,6 +55,14 @@
         <span class="hero-cover__scroll-hint">листайте дальше ↓</span>
     </div>
 </section>
+<!-- Вторая обложка: Подписка на цветы -->
+    <section class="hero-cover subscription-cover">
+        <div class="hero-cover__text">
+            <h2>Цветочная подписка</h2>
+            <p>Регулярная доставка свежих концептуальных букетов в ваш дом или офис. Заполните анкету, чтобы мы подобрали идеальный формат и график под вашу атмосферу.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScK8FtkK9Z-WBa8OQw9ybTT2tGCF37g75uZXueBhKJaJhazUw/viewform" target="_blank" class="btn-subscription">Оформить подписку</a>
+        </div>
+    </section>
   <main class="wrap main">
     <div class="layout">
       <!-- left: каталог -->
@@ -949,6 +957,81 @@ nav.nav .nav__link:hover {
 [class*="survey"], 
 a[href*="docs.google.com/forms"] {
     display: none !important;
+}
+/* ==========================================================================
+   СЕКЦИЯ ПОДПИСКИ НА ЦВЕТЫ (ВТОРОЙ БОЛЬШОЙ ФОН)
+   ========================================================================== */
+
+.subscription-cover {
+    position: relative !important;
+    min-height: 80vh !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
+                      url('./images/subscription-bg.jpg') !important; /* Сюда закинь фоновую картинку */
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 60px 20px !important;
+}
+
+.subscription-cover h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 42px !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+}
+
+.subscription-cover p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    max-width: 600px !important;
+    margin: 0 auto 35px auto !important;
+}
+
+.btn-subscription {
+    display: inline-block !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #111111 !important;
+    background-color: #ffffff !important;
+    padding: 16px 40px !important;
+    text-decoration: none !important;
+    border: 1px solid #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-subscription:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+@media screen and (max-width: 768px) {
+    .subscription-cover {
+        min-height: 60vh !important;
+    }
+    .subscription-cover h2 {
+        font-size: 28px !important;
+    }
+    .subscription-cover p {
+        font-size: 14px !important;
+    }
+    .btn-subscription {
+        padding: 14px 30px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 </style>
 <script>
