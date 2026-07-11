@@ -546,6 +546,52 @@ body, button, input, select, textarea {
     background-color: #ffffff !important;
     transform: translateY(-1px);
 }
+/* Мобильная адаптация меню категорий «НЕФТЪ 12.07» */
+@media (max-width: 768px) {
+    /* Делаем шапку компактнее на смартфонах */
+    .header {
+        padding: 10px 15px !important;
+    }
+    
+    .header__inner {
+        flex-direction: column !important; /* Выстраиваем логотип и меню друг под другом */
+        align-items: flex-start !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    /* Превращаем навигацию в аккуратную горизонтальную ленту со свайпом */
+    .nav {
+        display: flex !important;
+        flex-direction: row !important; /* Строго в одну линию */
+        overflow-x: auto !important; /* Включаем горизонтальную прокрутку пальцем */
+        scroll-behavior: smooth !important;
+        width: 100% !important;
+        padding-bottom: 8px !important; /* Отступ под скролл */
+        gap: 8px !important; /* Компактное расстояние между кнопками */
+        
+        /* Прячем некрасивый системный ползунок скролла */
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .nav::-webkit-scrollbar {
+        display: none !important; /* Скрываем скроллбар в Safari и Chrome */
+    }
+
+    /* Делаем сами кнопочки еще аккуратнее и компактнее на мобилках */
+    .nav__link {
+        white-space: nowrap !important; /* Запрещаем тексту переноситься на новую строку */
+        font-size: 11px !important;
+        padding: 6px 12px !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    /* Корректируем отступ для контента, чтобы обложка не уезжала */
+    .catalog__list, .products__grid, .grid {
+        padding-top: 100px !important;
+    }
+}
 </style>
 
 </body>
