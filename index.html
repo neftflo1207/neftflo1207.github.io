@@ -858,10 +858,19 @@ div[class*="header"] > h1 {
     display: none !important;
 }
 /* ==========================================================================
-   БУРГЕР-МЕНЮ ДЛЯ ВСЕХ ЭКРАНОВ (ЖУРНАЛЬНЫЙ СТИЛЬ)
+   ИСПРАВЛЕННОЕ БУРГЕР-МЕНЮ (СТРОГО ПОД КНОПКОЙ И КОНТРАСТНЫЙ ШРИФТ)
    ========================================================================== */
 
-/* Делаем кнопку бургера видимой и на ПК, и на мобилках */
+/* 1. Родителю (шапке) даем относительное позиционирование, чтобы меню не улетало */
+.header__inner {
+    position: relative !important;
+    display: flex !important;
+    justify-content: flex-end !important; /* Сдвигаем бургер в правый угол */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* 2. Сама кнопка бургера — теперь четко справа */
 .mobile-menu-toggle {
     display: flex !important;
     flex-direction: column;
@@ -872,59 +881,68 @@ div[class*="header"] > h1 {
     cursor: pointer;
     z-index: 2000 !important;
     padding: 10px;
+    margin-left: auto !important; /* Выталкиваем в крайнюю правую точку */
 }
 
-/* Стили линий самого бургера (строгие белые/черные линии) */
 .mobile-menu-toggle span {
     display: block !important;
     width: 24px !important;
     height: 2px !important;
-    background-color: #ffffff !important; /* Белые линии поверх темной обложки */
+    background-color: #ffffff !important;
     transition: all 0.3s ease;
 }
 
-/* Инвертируем цвет линий в черный, если шапка становится светлой при скролле */
-.header--scrolled .mobile-menu-toggle span {
-    background-color: #111111 !important;
-}
-
-/* Изначально скрываем меню и превращаем его в выпадающую панель */
+/* 3. Выпадающее меню: позиционируем СТРОГО под кнопкой справа */
 nav.nav {
-    display: none !important; /* По умолчанию скрыто */
+    display: none !important;
     position: absolute !important;
-    top: 100% !important;
-    right: 20px !important;
-    background: rgba(17, 17, 17, 0.95) !important; /* Строгий темный фон с легким размытием */
-    backdrop-filter: blur(10px);
-    padding: 20px 30px !important;
+    top: 100% !important; /* Ровно под шапкой */
+    right: 10px !important; /* Выравнивание по правому краю под бургером */
+    background: #111111 !important; /* Глухой строгий черный цвет */
+    padding: 20px !important;
     flex-direction: column !important;
-    gap: 15px !important;
+    gap: 12px !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     z-index: 1999 !important;
-    min-width: 200px;
-    align-items: flex-start !important;
+    min-width: 220px !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 0px !important; /* Убираем овалы старого шаблона */
 }
 
-/* Когда меню добавляется класс .active через JS — оно выпадает */
+/* Открытое состояние */
 nav.nav.active {
     display: flex !important;
 }
 
-/* Ссылки внутри выпадающего меню */
+/* 4. Ссылки: убираем старый белый фон-овал и делаем шрифт максимально контрастным */
 nav.nav .nav__link {
-    color: #ffffff !important;
+    display: block !important;
+    background: transparent !important; /* Убиваем белые овальные подложки шаблона */
+    border: none !important;
+    border-radius: 0px !important;
+    padding: 8px 12px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    
+    /* Шрифт: белый, четкий, без размытия */
+    color: #ffffff !important; 
     font-family: 'Inter', sans-serif !important;
-    font-size: 14px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.08em !important;
     text-decoration: none !important;
-    padding: 5px 0 !important;
-    width: 100%;
-    transition: opacity 0.2s ease;
+    opacity: 0.85 !important;
+    transition: all 0.2s ease !important;
 }
 
+/* Подсветка при наведении */
 nav.nav .nav__link:hover {
-    opacity: 0.7;
+    opacity: 1 !important;
+    background: rgba(255, 255, 255, 0.08) !important; /* Легкий дорогой отблеск при наведении */
+    color: #ffffff !important;
 }
 </style>
 <script>
