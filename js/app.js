@@ -1,11 +1,9 @@
 const DATA_URL = "./data/product.json";
 const CONTACTS = {
-  phone: "+79274719121",
-  telegram: "https://t.me/mam_insad_me",
-  instagram: "https://www.instagram.com/mam.insad?igsh=c3g5dnNwYnN3dDc0&utm_source=qr",
-  whatsapp: "https://wa.me/message/QA4UW2CU7JN7O1",
-  max: "https://max.ru/id163604335366_biz",
-  max_pm: "https://max.ru/u/f9LHodD0cOLr_DCrZ0es-3Cdx5Jctv35W82BgEFzqatYi4n9M9XTfVtEcmQ"
+  phone: "+79950070261",
+  telegram: "https://t.me/@neftflo_me",
+  instagram: "https://www.instagram.com/neft_flo.15.07?igsh=Mjh6dXN4YThvbTI5",
+  max: "https://max.ru/u/f9LHodD0cOI2pRUBcQ18CNBLRFA0-s4Tjq56xNGHiLpk3CyRGNoDQUgVoio"
 };
 
 const state = {
