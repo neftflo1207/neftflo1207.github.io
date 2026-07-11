@@ -857,6 +857,75 @@ main > h1,
 div[class*="header"] > h1 {
     display: none !important;
 }
+/* ==========================================================================
+   БУРГЕР-МЕНЮ ДЛЯ ВСЕХ ЭКРАНОВ (ЖУРНАЛЬНЫЙ СТИЛЬ)
+   ========================================================================== */
+
+/* Делаем кнопку бургера видимой и на ПК, и на мобилках */
+.mobile-menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    z-index: 2000 !important;
+    padding: 10px;
+}
+
+/* Стили линий самого бургера (строгие белые/черные линии) */
+.mobile-menu-toggle span {
+    display: block !important;
+    width: 24px !important;
+    height: 2px !important;
+    background-color: #ffffff !important; /* Белые линии поверх темной обложки */
+    transition: all 0.3s ease;
+}
+
+/* Инвертируем цвет линий в черный, если шапка становится светлой при скролле */
+.header--scrolled .mobile-menu-toggle span {
+    background-color: #111111 !important;
+}
+
+/* Изначально скрываем меню и превращаем его в выпадающую панель */
+nav.nav {
+    display: none !important; /* По умолчанию скрыто */
+    position: absolute !important;
+    top: 100% !important;
+    right: 20px !important;
+    background: rgba(17, 17, 17, 0.95) !important; /* Строгий темный фон с легким размытием */
+    backdrop-filter: blur(10px);
+    padding: 20px 30px !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    z-index: 1999 !important;
+    min-width: 200px;
+    align-items: flex-start !important;
+}
+
+/* Когда меню добавляется класс .active через JS — оно выпадает */
+nav.nav.active {
+    display: flex !important;
+}
+
+/* Ссылки внутри выпадающего меню */
+nav.nav .nav__link {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    text-decoration: none !important;
+    padding: 5px 0 !important;
+    width: 100%;
+    transition: opacity 0.2s ease;
+}
+
+nav.nav .nav__link:hover {
+    opacity: 0.7;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -877,6 +946,23 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.remove('is-open');
         });
     });
+});
+// Оживление бургер-меню
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerBtn = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav.nav');
+
+    if (burgerBtn && navMenu) {
+        burgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Чтобы клик не закрывал меню сразу
+            navMenu.classList.toggle('active');
+        });
+
+        // Закрываем меню, если кликнули в любое другое место экрана
+        document.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+        });
+    }
 });
 </script>
 </body>
