@@ -134,7 +134,7 @@
             <div class="footer__item">
                 <span>адрес студии</span>
                 <p>Казань, Генерала Махмута Гареева 9а</p>
-                <p style="margin-top: 4px !important; font-size: 12px !important; color: #999999 !important;">ежедневно 09:00 — 21:00</p>
+                <p style="margin-top: 4px !important; font-size: 12px !important; color: #999999 !important;">ежедневно 10:00 — 21:00</p>
             </div>
             
             <div class="footer__item">
@@ -378,16 +378,22 @@ body, button, input, select, textarea {
     background-color: #333333 !important;
 }
 /* Полноэкранная обложка сайта */
+/* Полноэкранная обложка с фоновым фото */
 .hero-cover {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
     height: 100vh !important; /* Ровно на весь экран */
-    background-color: #ffffff !important;
+    
+    /* УКАЖИ СЮДА ПУТЬ К СВОЕМУ ФОТО */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/hero-bg.jpg') !important; 
+    
+    background-size: cover !important; /* Растягивает фото на весь экран без искажений */
+    background-position: center !important; /* Центрирует картинку */
+    background-repeat: no-repeat !important;
     padding: 40px !important;
     box-sizing: border-box !important;
-    border-bottom: 1px solid #f0f0f0 !important;
 }
 
 /* Контейнер с текстом */
@@ -399,24 +405,24 @@ body, button, input, select, textarea {
     align-items: center !important;
 }
 
-/* Крупный минималистичный заголовок бренда */
+/* Крупный заголовок — теперь белый */
 .hero-cover__text h1 {
     font-family: 'Inter', sans-serif !important;
     font-weight: 300 !important;
     font-size: 48px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.15em !important;
-    color: #111111 !important;
+    color: #ffffff !important; /* Белый цвет */
     margin-bottom: 24px !important;
 }
 
-/* Лаконичное описание магазина */
+/* Описание магазина — чуть прозрачный белый */
 .hero-cover__text p {
     font-family: 'Inter', sans-serif !important;
     font-weight: 300 !important;
     font-size: 16px !important;
     line-height: 1.8 !important;
-    color: #555555 !important;
+    color: rgba(255, 255, 255, 0.8) !important; /* Белый с прозрачностью */
     letter-spacing: 0.02em !important;
     margin-bottom: 40px !important;
 }
@@ -428,8 +434,9 @@ body, button, input, select, textarea {
     font-size: 12px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.1em !important;
-    color: #999999 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
     animation: pulse 2s infinite;
+
 }
 
 /* Легкая анимация покачивания подсказки */
