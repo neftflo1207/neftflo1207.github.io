@@ -693,14 +693,23 @@ body, button, input, select, textarea {
 }
 /* --- КАРДИНАЛЬНАЯ ЗАЧИСТКА И ПЕРЕБОРОКА СИДБАРA --- */
 
-/* Полностью обнуляем старую белую плашку, убираем фон, тени и скругления */
-aside.sidebar, .sidebar, .panel, .sidebar .panel {
+/* Добавляем тонкую журнальную рамочку вокруг всего меню фильтров */
+aside.sidebar, .sidebar {
     background: transparent !important;
-    border: none !important;
+    border: 1px solid #e5e5e5 !important; /* Тонкая, изящная серая линия */
     box-shadow: none !important;
-    padding: 0 !important;
+    padding: 30px 25px !important; /* Отступы внутри рамки, чтобы тексту было просторно */
     margin: 0 !important;
     width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Обнуляем внутреннюю панель, чтобы она не ломала внешнюю рамку */
+.panel, .sidebar .panel {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 /* Очищаем контейнер кнопок и заставляем их встать ровно в столбик без обрезания */
