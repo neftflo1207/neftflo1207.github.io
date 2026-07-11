@@ -946,38 +946,48 @@ nav.nav .nav__link:hover {
 }
 </style>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav');
-    const navLinks = document.querySelectorAll('.nav__link');
-
-    // Открываем/закрываем по клику на бургер
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('is-active');
-        navMenu.classList.toggle('is-open');
-    });
-
-    // Закрываем меню, если кликнули на любую из категорий
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('is-active');
-            navMenu.classList.remove('is-open');
-        });
-    });
-});
-// Оживление бургер-меню
 document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('nav.nav');
 
     if (burgerBtn && navMenu) {
+        // Открытие/закрытие меню по клику на бургер
         burgerBtn.addEventListener('click', function(e) {
-            e.stopPropagation(); // Чтобы клик не закрывал меню сразу
+            e.stopPropagation();
+            burgerBtn.classList.toggle('is-active'); // На случай анимации крестика
             navMenu.classList.toggle('active');
         });
 
-        // Закрываем меню, если кликнули в любое другое место экрана
+        // Плавный скролл при клике на категории
+        const navLinks = navMenu.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Если это ссылка на гугл-форму (опрос/подписка), не ломаем её
+                if (this.getAttribute('href').startsWith('http')) {
+                    return; 
+                }
+
+                e.preventDefault(); // Отменяем резкий прыжок
+
+                // Ищем начало каталога
+                const targetSection = document.querySelector('.layout') || document.getElementById('grid');
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                // Закрываем меню после клика
+                burgerBtn.classList.remove('is-active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Закрываем меню при клике в пустую область экрана
         document.addEventListener('click', function() {
+            burgerBtn.classList.remove('is-active');
             navMenu.classList.remove('active');
         });
     }
