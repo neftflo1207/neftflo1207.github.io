@@ -798,50 +798,60 @@ aside.sidebar, .sidebar {
     background: transparent !important;
 }
 /* ==========================================================================
-   БЕЗОПАСНЫЙ СТИЛЬ КАТАЛОГА В РЯД
+   ЖЕСТКОЕ ПРИНУДИТЕЛЬНОЕ РАЗДЕЛЕНИЕ НА 3 КОЛОНКИ
    ========================================================================= */
 
-/* Заставляем контейнер выстраивать элементы в сетку */
-#grid.grid, .grid {
+/* Жестко прописываем 3 колонки для ПК, отключая любые старые flex-настройки */
+#grid.grid, .grid, [id="grid"] {
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Ровно три колонки на одной строке */
     gap: 30px 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: row !important; /* На случай, если старый код заставлял его быть flex-column */
 }
 
-/* Сбрасываем жесткую ширину карточек, чтобы они встали в ряд */
+/* Принудительно сбрасываем ширину карточек, чтобы они не взрывали сетку */
 .grid > div, .product-card {
-    width: auto !important;
-    height: auto !important;
+    width: 100% !important; /* Теперь они занимают ровно 1/3 от общей ширины */
+    max-width: 100% !important;
+    min-width: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    position: relative !important;
     background: #ffffff !important;
 }
 
-/* Возвращаем текст и делаем его видимым под картинкой */
+/* Ограничиваем высоту картинки, чтобы букеты на ПК смотрелись аккуратно и компактно */
+.grid > div img, .product-card img {
+    width: 100% !important;
+    height: 300px !important; /* Умеренная журнальная высота */
+    object-fit: cover !important;
+}
+
+/* Блок с текстом под картинкой */
 .grid > div .info, .product-card__info {
-    position: relative !important;
+    padding: 15px 5px !important;
     background: #ffffff !important;
-    padding: 15px !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
-/* Название букета — четкое и видимое */
-.grid > div h3, .product-card__title {
-    color: #111111 !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    margin-bottom: 5px !important;
-    display: block !important;
+/* --- АДАПТИВНОСТЬ ДЛЯ ЭКРАНОВ ПОМЕНЬШЕ --- */
+
+/* На небольших ноутбуках и планшетах перестраиваем в 2 колонки */
+@media screen and (max-width: 1200px) {
+    #grid.grid, .grid, [id="grid"] {
+        grid-template-columns: repeat(2, 1fr) !important; 
+    }
 }
 
-/* Цена букета */
-.grid > div [class*="price"], .product-card__price {
-    color: #666666 !important;
-    font-size: 14px !important;
-    display: block !important;
+/* На мобильных телефонах оставляем строгие 2 колонки, но уменьшаем высоту картинок */
+@media screen and (max-width: 768px) {
+    #grid.grid, .grid, [id="grid"] {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 15px 10px !important;
+    }
+    .grid > div img, .product-card img {
+        height: 200px !important; /* Аккуратный размер для смартфона */
+    }
 }
 </style>
 <script>
