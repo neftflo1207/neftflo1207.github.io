@@ -491,6 +491,61 @@ body, button, input, select, textarea {
     align-items: center !important;
     gap: 30px !important;
 }
+/* Фиксируем шапку намертво наверху, убираем лишние отступы и делаем её прозрачной */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important; /* Гарантирует, что меню всегда поверх всех фото */
+    background: transparent !important; /* Убираем любые серые фоны */
+    background-color: transparent !important;
+    padding: 10px 30px !important; /* Уменьшили высоту шапки */
+    box-sizing: border-box !important;
+}
+
+/* Выравниваем логотип и кнопки категорий в одну линию */
+.header__inner, .nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important; /* Расстояние между кнопками */
+}
+
+/* Делаем текст логотипа белым, аккуратным и чуть меньше */
+.brand__text {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+/* Логотип-картинка: делаем его поменьше */
+.brand__logo {
+    height: 35px !important; 
+    width: auto !important;
+}
+
+/* Уменьшаем сами овальные кнопки меню */
+.nav__link {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important; /* Компактный шрифт */
+    font-weight: 400 !important;
+    text-transform: lowercase !important;
+    color: #111111 !important; /* Текст внутри кнопок оставляем темным для читаемости */
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Благородный белый полупрозрачный фон плашек */
+    padding: 6px 14px !important; /* Уменьшили внутренние отступы кнопок */
+    border-radius: 20px !important; /* Округлые края */
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Эффект при наведении на кнопки */
+.nav__link:hover {
+    background-color: #ffffff !important;
+    transform: translateY(-1px);
+}
 </style>
 
 </body>
