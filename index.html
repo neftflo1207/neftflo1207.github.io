@@ -647,14 +647,11 @@ body, button, input, select, textarea {
 }
 /* Стили для второй сезонной обложки */
 .hero-cover--seasonal {
-    /* УКАЖИ СЮДА ПУТЬ К ФОТО СЕЗОННОГО ТОВАРА */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/seasonal-bg.jpg') !important;
-    
-    /* Эффект фиксации фона для дорогого и плавного перехода при скролле */
-    background-attachment: fixed !important; 
+    background-attachment: fixed !important; /* Работает отлично на ПК */
 }
 
-/* Стили для заголовка второй обложки (чуть изящнее) */
+/* Стили для заголовка второй обложки */
 .hero-cover__text h2 {
     font-family: 'Inter', sans-serif !important;
     font-weight: 300 !important;
@@ -663,6 +660,15 @@ body, button, input, select, textarea {
     letter-spacing: 0.15em !important;
     color: #ffffff !important;
     margin-bottom: 24px !important;
+}
+
+/* Лечим баг с размытием картинки на телефонах */
+@media screen and (max-width: 768px) {
+    .hero-cover--seasonal {
+        background-attachment: scroll !important; /* Отключаем фиксацию на мобилках */
+        background-position: center center !important;
+        background-size: cover !important;
+    }
 }
 </style>
 <script>
