@@ -408,6 +408,67 @@ body, button, input, select, textarea {
 .modal__btn:hover, .order-btn:hover {
     background-color: #333333 !important;
 }
+/* Полноэкранная обложка сайта */
+.hero-cover {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100vh !important; /* Ровно на весь экран */
+    background-color: #ffffff !important;
+    padding: 40px !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* Контейнер с текстом */
+.hero-cover__text {
+    max-width: 600px !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Крупный минималистичный заголовок бренда */
+.hero-cover__text h1 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 48px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    color: #111111 !important;
+    margin-bottom: 24px !important;
+}
+
+/* Лаконичное описание магазина */
+.hero-cover__text p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    color: #555555 !important;
+    letter-spacing: 0.02em !important;
+    margin-bottom: 40px !important;
+}
+
+/* Подсказка для скролла */
+.hero-cover__scroll-hint {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #999999 !important;
+    animation: pulse 2s infinite;
+}
+
+/* Легкая анимация покачивания подсказки */
+@keyframes pulse {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(6px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.6; }
+}
 </style>
 
 </body>
