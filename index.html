@@ -14,8 +14,8 @@
     <div class="wrap header__inner">
         <a class="brand" href="#">
             <span class="brand_dot"></span>
-            <img class="brand__logo" src="./images/logo svg.svg" alt="НЕФТЬ 12.07" />
-            <span class="brand__text">НЕФТЪ 12.07 – Каталог</span>
+            <img class="brand__logo" src="./images/logo svg.svg" alt="НЕФТЬ 15.07" />
+            <span class="brand__text">НЕФТЪ 15.07 – Каталог</span>
         </a>
 
         <!-- Кнопка бургер (видна только на телефонах) -->
@@ -26,21 +26,29 @@
 
         <!-- Навигация -->
         <nav class="nav">
-            <a class="nav__link" data-category="all" href="#">Все разделы</a>
+            <a class="nav__link" data-category="all" href="#">Вернутся в меню</a>
             <a class="nav__link" data-category="bouquets" href="#/category/bouquets">Букеты</a>
             <a class="nav__link" data-category="baskets" href="#/category/baskets">Композиции</a>
             <a class="nav__link" data-category="postcards" href="#/category/postcards">Открытки</a>
             <a class="nav__link" data-category="mono" href="#/category/mono">Монобукеты</a>
-            <a class="nav__link nav__link--survey" href="https://docs.google.com/forms/d/e/1FAIpQLScK8Ftk...">Подписка на цветы</a>
+            <a class="nav__link nav__link--survey" href="https://docs.google.com/forms/d/e/1FAIpQLScK8FtkK9Z-WBa8OQw9ybTT2tGCF37g75uZXueBhKJaJhazUw/viewform?usp=dialog">Подписка на цветы</a>
         </nav>
     </div>
 </header>
   <!-- Главная обложка в стиле Sobran v Sadu -->
 <section class="hero-cover">
     <div class="hero-cover__text">
-        <h1>нефтъ 12.07</h1>
-        <p>авторская флористика и концептуальные букеты. создаем цветочные истории, которые вдохновляют и остаются в памяти.</p>
+        <h1>Нефтъ 15.07</h1>
+        <p>Авторская флористика и концептуальные букеты. создаем цветочные истории, которые вдохновляют и остаются в памяти.</p>
         <span class="hero-cover__scroll-hint">листайте вниз ↓</span>
+    </div>
+</section>
+<!-- Вторая полноэкранная обложка под сезонный товар -->
+<section class="hero-cover hero-cover--seasonal">
+    <div class="hero-cover__text">
+        <h2>Летняя коллекция</h2>
+        <p>сезонные пионы и авторские композиции, вобравшие в себя всё тепло этого лета.</p>
+        <span class="hero-cover__scroll-hint">листайте дальше ↓</span>
     </div>
 </section>
 
@@ -636,6 +644,25 @@ body, button, input, select, textarea {
     .mobile-menu-toggle {
         display: none !important;
     }
+}
+/* Стили для второй сезонной обложки */
+.hero-cover--seasonal {
+    /* УКАЖИ СЮДА ПУТЬ К ФОТО СЕЗОННОГО ТОВАРА */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/seasonal-bg.jpg') !important;
+    
+    /* Эффект фиксации фона для дорогого и плавного перехода при скролле */
+    background-attachment: fixed !important; 
+}
+
+/* Стили для заголовка второй обложки (чуть изящнее) */
+.hero-cover__text h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 40px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    color: #ffffff !important;
+    margin-bottom: 24px !important;
 }
 </style>
 <script>
