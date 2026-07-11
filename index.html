@@ -798,89 +798,50 @@ aside.sidebar, .sidebar {
     background: transparent !important;
 }
 /* ==========================================================================
-   УЛЬТРА-СИЛОВОЙ КАТАЛОГ В РЯД (ДЛЯ ПК)
+   БЕЗОПАСНЫЙ СТИЛЬ КАТАЛОГА В РЯД
    ========================================================================= */
 
-/* Жестко ломаем старый флекс шаблона и принудительно включаем СЕТКУ */
-#grid.grid, 
-.grid, 
-.catalog section.grid, 
-section[id="grid"] {
+/* Заставляем контейнер выстраивать элементы в сетку */
+#grid.grid, .grid {
     display: grid !important;
-    /* Разрешаем карточкам быть компактными и вставать по 3-4 в ряд */
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
-    gap: 40px 24px !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+    gap: 30px 20px !important;
 }
 
-/* Принудительно сбиваем старую ширину в 100% с КАЖДОГО элемента внутри сетки */
-#grid.grid > div, 
-.grid > div, 
-.product-card, 
-[class*="card"] {
-    width: auto !important; /* Убираем растяжение во всю ширину */
-    max-width: 100% !important;
-    min-width: 0 !important;
+/* Сбрасываем жесткую ширину карточек, чтобы они встали в ряд */
+.grid > div, .product-card {
+    width: auto !important;
+    height: auto !important;
     display: flex !important;
     flex-direction: column !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-/* Фиксируем высоту картинок, чтобы они не размывались и были аккуратными */
-#grid.grid img, 
-.grid img, 
-.product-card img, 
-[class*="card"] img {
-    width: 100% !important;
-    height: 320px !important;
-    max-height: 320px !important;
-    min-height: 320px !important;
-    object-fit: cover !important;
-}
-
-/* Блок с инфой под картинкой */
-.grid > div .info, 
-.grid > div [class*="info"], 
-.product-card__info {
     position: relative !important;
-    padding: 15px 0 !important; /* Отступы только сверху и снизу */
-    background: transparent !important;
+    background: #ffffff !important;
 }
 
-/* Название букета */
+/* Возвращаем текст и делаем его видимым под картинкой */
+.grid > div .info, .product-card__info {
+    position: relative !important;
+    background: #ffffff !important;
+    padding: 15px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Название букета — четкое и видимое */
 .grid > div h3, .product-card__title {
-    font-family: 'Inter', sans-serif !important;
+    color: #111111 !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    color: #111111 !important;
-    margin: 0 0 6px 0 !important;
+    margin-bottom: 5px !important;
+    display: block !important;
 }
 
-/* Цена */
+/* Цена букета */
 .grid > div [class*="price"], .product-card__price {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
     color: #666666 !important;
-}
-
-/* --- ОСТАВЛЯЕМ СТРОГИЕ 2 В РЯД НА ТЕЛЕФОНАХ --- */
-@media screen and (max-width: 768px) {
-    #grid.grid, .grid, section[id="grid"] {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 20px 12px !important;
-    }
-    #grid.grid img, .grid img {
-        height: 220px !important;
-        max-height: 220px !important;
-        min-height: 220px !important;
-    }
+    font-size: 14px !important;
+    display: block !important;
 }
 </style>
 <script>
