@@ -10,27 +10,31 @@
 </head>
 
 <body>
-  <header class="header">
+ <header class="header">
     <div class="wrap header__inner">
-      <a class="brand" href="#/">
-        <span class="brand__dot"></span>
-        <img class="brand__logo" src="./images/logo svg.svg" alt="НЕФТЪ 12.07" />
-        <span class="brand__text">НЕФТЪ 15.07 - Каталог</span>
-      </a>
+        <a class="brand" href="#">
+            <span class="brand_dot"></span>
+            <img class="brand__logo" src="./images/logo svg.svg" alt="НЕФТЬ 12.07" />
+            <span class="brand__text">НЕФТЪ 12.07 – Каталог</span>
+        </a>
 
-      <nav class="nav">
-        <a class="nav__link" data-category="all" href="#/">Все разделы</a>
-        <a class="nav__link" data-category="bouquets" href="#/category/bouquets">Букеты</a>
-        <!-- <a class="nav__link" data-category="winter" href="#/category/winter">Зимние композиции</a> -->
-        <a class="nav__link" data-category="baskets" href="#/category/baskets">Композиции</a>
-        <!-- <a class="nav__link" data-category="accessories" href="#/category/accessories">Аксессуары</a> -->
-        <a class="nav__link" data-category="postcards" href="#/category/postcards">Открытки</a>
-        <a class="nav__link" data-category="mono" href="#/category/mono">Монобукеты</a>
-        <a class="nav__link nav__link--survey" href="https://docs.google.com/forms/d/e/1FAIpQLScK8FtkK9Z-WBa8OQw9ybTT2tGCF37g75uZXueBhKJaJhazUw/viewform?usp=publish-editor" target="_blank">Подписка на цветы</a>
+        <!-- Кнопка бургер (видна только на телефонах) -->
+        <button class="mobile-menu-toggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+        </button>
 
-      </nav>
+        <!-- Навигация -->
+        <nav class="nav">
+            <a class="nav__link" data-category="all" href="#">Все разделы</a>
+            <a class="nav__link" data-category="bouquets" href="#/category/bouquets">Букеты</a>
+            <a class="nav__link" data-category="baskets" href="#/category/baskets">Композиции</a>
+            <a class="nav__link" data-category="postcards" href="#/category/postcards">Открытки</a>
+            <a class="nav__link" data-category="mono" href="#/category/mono">Монобукеты</a>
+            <a class="nav__link nav__link--survey" href="https://docs.google.com/forms/d/e/1FAIpQLScK8Ftk...">Подписка на цветы</a>
+        </nav>
     </div>
-  </header>
+</header>
   <!-- Главная обложка в стиле Sobran v Sadu -->
 <section class="hero-cover">
     <div class="hero-cover__text">
@@ -541,64 +545,120 @@ body, button, input, select, textarea {
     transition: all 0.2s ease !important;
 }
 
-/* Эффект при наведении на кнопки */
-.nav__link:hover {
-    background-color: #ffffff !important;
-    transform: translateY(-1px);
-}
-/* Усиленная мобильная адаптация меню категорий «НЕФТЪ 12.07» */
 @media screen and (max-width: 768px) {
+    /* Намертво фиксируем аккуратную прозрачную шапку */
     header.header, .header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        padding: 10px 15px !important;
-        background: rgba(0, 0, 0, 0.2) !important; /* Легкая дымка сверху для читаемости логотипы */
-    }
-    
-    .wrap.header__inner, .header__inner {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 8px !important;
-        width: 100% !important;
-        display: flex !important;
+        padding: 15px 20px !important;
+        background: rgba(0, 0, 0, 0.1) !important;
+        backdrop-filter: blur(5px) !important;
+        z-index: 99999 !important;
     }
 
-    /* Жестко перестраиваем контейнер навигации в свайп-ленту */
+    .header__inner {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        flex-direction: row !important;
+    }
+
+    /* Прячем десктопное меню на мобилках и превращаем в выпадающую шторку */
     nav.nav, .nav {
         display: flex !important;
-        flex-direction: row !important; /* Только в один ряд */
-        flex-wrap: nowrap !important; /* Запрещаем перенос кнопок на новые строки */
-        overflow-x: auto !important; /* Разрешаем листать пальцем */
-        scroll-behavior: smooth !important;
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        gap: 8px !important;
-        padding: 4px 0 8px 0 !important;
-        margin: 0 !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-    
-    /* Полностью скрываем полосу прокрутки во всех браузерах */
-    nav.nav::-webkit-scrollbar, .nav::-webkit-scrollbar {
-        display: none !important;
-        width: 0 !important;
-        height: 0 !important;
+        height: 100vh !important;
+        background: #111111 !important; /* Стильный глубокий темный фон */
+        padding: 100px 30px 40px 30px !important;
+        gap: 20px !important;
+        box-sizing: border-box !important;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transform: translateY(-100%) !important; /* Изначально меню спрятано наверху */
     }
 
-    /* Усмиряем сами кнопки, чтобы они не раздувались */
+    /* Когда меню открыто — плавно опускаем его */
+    .nav.is-open {
+        transform: translateY(0) !important;
+    }
+
+    /* Крупные журнальные ссылки в выпадающем меню */
     nav.nav .nav__link, .nav__link {
-        display: inline-block !important;
-        white-space: nowrap !important; /* Текст внутри кнопки не прыгает на новую строку */
-        font-size: 11px !important;
-        padding: 6px 12px !important;
-        border-radius: 20px !important;
-        background-color: rgba(255, 255, 255, 0.95) !important;
-        flex-shrink: 0 !important; /* Запрещаем кнопкам сжиматься и деформироваться */
+        font-size: 20px !important; /* Большой читаемый шрифт */
+        color: #ffffff !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 10px 0 !important;
+        text-align: left !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        width: 100% !important;
+        text-transform: lowercase !important;
+    }
+
+    /* Кнопка-гамбургер из двух минималистичных линий */
+    .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 24px !important;
+        height: 14px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        z-index: 100000 !important; /* Кнопка всегда выше шторки */
+        padding: 0 !important;
+    }
+
+    .mobile-menu-toggle span {
+        width: 100% !important;
+        height: 1px !important;
+        background-color: #ffffff !important; /* Белые минималистичные полоски */
+        transition: all 0.3s ease !important;
+    }
+
+    /* Анимация превращения бургера в крестик при открытии */
+    .mobile-menu-toggle.is-active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg) !important;
+    }
+    .mobile-menu-toggle.is-active span:nth-child(2) {
+        transform: translateY(-7px) rotate(-45deg) !important;
+    }
+}
+
+/* На компьютерах кнопку бургера просто скрываем */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none !important;
     }
 }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav__link');
 
+    // Открываем/закрываем по клику на бургер
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('is-active');
+        navMenu.classList.toggle('is-open');
+    });
+
+    // Закрываем меню, если кликнули на любую из категорий
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+        });
+    });
+});
+</script>
 </body>
 
 </html>
