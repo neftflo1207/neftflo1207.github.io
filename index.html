@@ -1048,6 +1048,30 @@ a[href*="docs.google.com/forms"] {
         margin: 20px auto 0 auto !important; /* Центрируем и добавляем отступ сверху */
     }
 }
+/* Красивое отображение карточек товаров на телефонах */
+@media screen and (max-width: 768px) {
+    /* Перестраиваем сетку в одну колонку */
+    #grid, .grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px !important;
+    }
+
+    /* Делаем каждую карточку на всю ширину с красивым скруглением */
+    .card_lutte, [class*="card"] {
+        width: 100% !important;
+        min-height: 450px !important; /* Оптимальная высота для фото букета на телефоне */
+        margin-bottom: 10px !important;
+    }
+
+    /* Немного уменьшаем размер шрифта, чтобы длинные названия не переносились некрасиво */
+    .card_lutte h3, [class*="card"] h3, [class*="card"] .title {
+        font-size: 20px !important;
+        letter-spacing: 0.1em !important;
+        line-height: 1.3 !important;
+    }
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
