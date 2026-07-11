@@ -51,7 +51,14 @@
         <span class="hero-cover__scroll-hint">листайте дальше ↓</span>
     </div>
 </section>
-
+<!-- Третья полноэкранная обложка под коллекцию роз -->
+<section class="hero-cover hero-cover--roses">
+    <div class="hero-cover__text">
+        <h2>Ажурные розы</h2>
+        <p>Премиальные сорта с глубоким раскрытием и неповторимой текстурой лепестков.</p>
+        <span class="hero-cover__scroll-hint">листайте дальше ↓</span>
+    </div>
+</section>
   <main class="wrap main">
     <div class="layout">
       <!-- left: каталог -->
@@ -666,6 +673,20 @@ body, button, input, select, textarea {
 @media screen and (max-width: 768px) {
     .hero-cover--seasonal {
         background-attachment: scroll !important; /* Отключаем фиксацию на мобилках */
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+}
+/* Стили для третьей обложки с розами */
+.hero-cover--roses {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/roses-bg.jpg') !important;
+    background-attachment: fixed !important; /* Плавный скролл на компьютерах */
+}
+
+/* Лечим баг с картинкой роз на телефонах */
+@media screen and (max-width: 768px) {
+    .hero-cover--roses {
+        background-attachment: scroll !important; /* Обычный скролл для мобилок */
         background-position: center center !important;
         background-size: cover !important;
     }
