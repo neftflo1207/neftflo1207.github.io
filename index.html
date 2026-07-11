@@ -798,98 +798,88 @@ aside.sidebar, .sidebar {
     background: transparent !important;
 }
 /* ==========================================================================
-   ФИНАЛЬНАЯ ПЕРЕСБОРКА КАРТОЧКИ ТОВАРА (ЖУРНАЛЬНЫЙ СТИЛЬ)
+   УЛЬТРА-СИЛОВОЙ КАТАЛОГ В РЯД (ДЛЯ ПК)
    ========================================================================= */
 
-/* 1. Сетка: компактно, по 3-4 в ряд на ПК */
-#grid.grid, .grid {
+/* Жестко ломаем старый флекс шаблона и принудительно включаем СЕТКУ */
+#grid.grid, 
+.grid, 
+.catalog section.grid, 
+section[id="grid"] {
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
-    gap: 30px 20px !important;
+    /* Разрешаем карточкам быть компактными и вставать по 3-4 в ряд */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+    gap: 40px 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
-/* 2. Сама карточка: убираем старую белую плашку, тени и скругления */
-.grid > div, .product-card, [class*="card"] {
-    background: #ffffff !important;
-    border: none !important;
-    box-shadow: none !important; /* Наглухо убираем старую тень */
-    border-radius: 0px !important; /* Убираем скругления */
+/* Принудительно сбиваем старую ширину в 100% с КАЖДОГО элемента внутри сетки */
+#grid.grid > div, 
+.grid > div, 
+.product-card, 
+[class*="card"] {
+    width: auto !important; /* Убираем растяжение во всю ширину */
+    max-width: 100% !important;
+    min-width: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
-/* 3. Картинка: строго сверху, фиксированной высоты */
-.grid > div img, .product-card img, [class*="card"] img {
+/* Фиксируем высоту картинок, чтобы они не размывались и были аккуратными */
+#grid.grid img, 
+.grid img, 
+.product-card img, 
+[class*="card"] img {
     width: 100% !important;
     height: 320px !important;
+    max-height: 320px !important;
+    min-height: 320px !important;
     object-fit: cover !important;
-    order: 1 !important; /* Картинка всегда первая */
 }
 
-/* 4. Блок с текстом: переносим ПОД картинку, убираем старое наложение */
+/* Блок с инфой под картинкой */
 .grid > div .info, 
 .grid > div [class*="info"], 
-.product-card__info, 
-[class*="card"] [class*="info"] {
-    order: 2 !important; /* Текст всегда второй */
-    position: relative !important; /* Отключаем absolute наложение */
-    bottom: auto !important;
-    left: auto !important;
-    background: transparent !important; /* Убираем старую белую плашку */
-    background-image: none !important; /* Убираем старый градиент-затемнение */
-    padding: 15px !important; /* Делаем аккуратные отступы внутри текста */
-    margin: 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+.product-card__info {
+    position: relative !important;
+    padding: 15px 0 !important; /* Отступы только сверху и снизу */
+    background: transparent !important;
 }
 
-/* 5. Название букета: строгий шрифт, черный цвет */
-.grid > div h3, 
-.product-card__title, 
-[class*="card"] [class*="title"] {
+/* Название букета */
+.grid > div h3, .product-card__title {
     font-family: 'Inter', sans-serif !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
-    color: #111111 !important; /* Принудительно черный цвет */
-    margin: 0 0 8px 0 !important;
-    line-height: 1.4 !important;
+    color: #111111 !important;
+    margin: 0 0 6px 0 !important;
 }
 
-/* 6. Цена: тонкая, аккуратная */
-.grid > div [class*="price"], 
-.product-card__price, 
-[class*="card"] [class*="price"] {
+/* Цена */
+.grid > div [class*="price"], .product-card__price {
     font-family: 'Inter', sans-serif !important;
     font-size: 14px !important;
-    font-weight: 300 !important;
-    color: #666666 !important; /* Принудительно серый цвет */
+    font-weight: 400 !important;
+    color: #666666 !important;
 }
 
-/* 7. Убираем старый градиент-затемнение, если он остался */
-.product-card__image-wrap::after, .grid > div::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* --- МОБИЛЬНАЯ ВЕРСИЯ (СТРОГО ПО 2 В РЯД) --- */
+/* --- ОСТАВЛЯЕМ СТРОГИЕ 2 В РЯД НА ТЕЛЕФОНАХ --- */
 @media screen and (max-width: 768px) {
-    #grid.grid, .grid {
+    #grid.grid, .grid, section[id="grid"] {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px 10px !important;
+        gap: 20px 12px !important;
     }
-
-    .grid > div img, .product-card img, [class*="card"] img {
+    #grid.grid img, .grid img {
         height: 220px !important;
-    }
-    
-    .grid > div .info, 
-    .grid > div [class*="info"] {
-        padding: 10px !important; /* Меньше отступы на телефоне */
+        max-height: 220px !important;
+        min-height: 220px !important;
     }
 }
 </style>
