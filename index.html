@@ -944,6 +944,12 @@ nav.nav .nav__link:hover {
     background: rgba(255, 255, 255, 0.08) !important; /* Легкий дорогой отблеск при наведении */
     color: #ffffff !important;
 }
+/* Полностью удаляем плавающую кнопку Опроса */
+.nav__link--survey, 
+[class*="survey"], 
+a[href*="docs.google.com/forms"] {
+    display: none !important;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
