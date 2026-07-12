@@ -120,7 +120,7 @@
           <!-- order and contacts-->
           <div class="orderbox">
             <div class="orderbox__row">
-              <a id="dlgOrderLink" class="btn" target="_blank" rel="noopener">Оформить заказ</a>
+              <a id="dlgOrderLink" class="btn" href="tel:+79991234567" onclick="if(!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){ alert('Для заказа позвоните нам по телефону: +7 (999) 123-4567'); return false; }">Оформить заказ</a>
               <button id="dlgCopyLink" class="btn btn--ghost" type="button">Скопировать ссылку</button>
             </div>
             <div class="orderbox__row orderbox__row--links">
