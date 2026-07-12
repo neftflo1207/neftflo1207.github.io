@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+Sitemap: https://neftflo.ru/sitemap.xml
+Host: https://neftflo.ru
